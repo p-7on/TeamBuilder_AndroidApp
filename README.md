@@ -1,4 +1,4 @@
-Teambuilder App
+**Teambuilder App**
 
 A “SpielerPlus” clone for football teams, coaches, and players — designed to simplify team organization.
 
