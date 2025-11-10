@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:orientation="vertical"
+    tools:context=".EventEditActivity">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="72dp"
+        android:background="@null"
+        android:onClick="saveEventAction"
+        android:text="Speichern"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/eventTimeTV"
+        android:layout_width="71dp"
+        android:layout_height="29dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="200dp"
+        android:text="Uhrzeit:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/eventDateTV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/event_opponent_slogan"
+        android:layout_width="100dp"
+        android:layout_height="29dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="330dp"
+        android:text="Gegner:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/eventDateTV"
+        android:layout_width="306dp"
+        android:layout_height="28dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="150dp"
+        android:text="Datum:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/eventNameET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:text="Name:"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_type"
+        android:layout_width="125dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="390dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chooseEventTV" />
+
+    <TextView
+        android:id="@+id/chooseEventTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="Eventtyp:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinner_type" />
+
+    <EditText
+        android:id="@+id/event_timeTV"
+        android:layout_width="140dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/eventTimeTV"
+        app:layout_constraintStart_toEndOf="@+id/eventTimeTV"
+        app:layout_constraintTop_toTopOf="@+id/eventTimeTV" />
+
+    <EditText
+        android:id="@+id/event_opponentTV"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/event_opponent_slogan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/event_opponent_slogan"
+        app:layout_constraintTop_toTopOf="@+id/event_opponent_slogan" />
+
+    <CheckBox
+        android:id="@+id/type_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:onClick="onClickBox"
+        android:text="Bestätigen"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_type"
+        app:layout_constraintStart_toEndOf="@+id/spinner_type"
+        app:layout_constraintTop_toTopOf="@+id/spinner_type" />
+
+    <TextView
+        android:id="@+id/event_location_slogan"
+        android:layout_width="96dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="40dp"
+        android:text="Spielort:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/event_opponent_slogan"
+        app:layout_constraintStart_toStartOf="@+id/event_opponent_slogan"
+        app:layout_constraintTop_toBottomOf="@+id/event_opponent_slogan" />
+
+    <EditText
+        android:id="@+id/event_locationTV"
+        android:layout_width="140dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/event_location_slogan"
+        app:layout_constraintStart_toStartOf="@+id/event_opponentTV"
+        app:layout_constraintTop_toTopOf="@+id/event_location_slogan" />
+
+    <TextView
+        android:id="@+id/event_meetingpoint_slogan"
+        android:layout_width="101dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="40dp"
+        android:text="Treffpunkt:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/event_location_slogan"
+        app:layout_constraintStart_toStartOf="@+id/event_location_slogan"
+        app:layout_constraintTop_toBottomOf="@+id/event_location_slogan" />
+
+    <EditText
+        android:id="@+id/event_meetingpointTV"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/event_meetingpoint_slogan"
+        app:layout_constraintStart_toStartOf="@+id/event_locationTV"
+        app:layout_constraintTop_toTopOf="@+id/event_meetingpoint_slogan" />
+</androidx.constraintlayout.widget.ConstraintLayout>

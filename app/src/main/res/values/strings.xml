@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Pro1</string>
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="forward"><![CDATA[->]]></string>
+
+    <string-array name="functions">
+        <item>Spieler</item>
+        <item>Betreuer</item>
+    </string-array>
+
+    <string-array name="type">
+        <item>Training</item>
+        <item>Spiel</item>
+    </string-array>
+</resources>
